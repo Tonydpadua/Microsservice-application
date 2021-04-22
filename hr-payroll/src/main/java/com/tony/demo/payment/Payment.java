@@ -12,6 +12,7 @@ import java.io.Serializable;
 @AllArgsConstructor
 @NoArgsConstructor
 public class Payment implements Serializable {
+
     private static final long serialVersionUID = 1L;
 
     private String name;
@@ -21,5 +22,4 @@ public class Payment implements Serializable {
     public double getTotal() {
         return days * dailyIncome;
     }
-
 }
