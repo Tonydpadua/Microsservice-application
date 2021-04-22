@@ -11,9 +11,9 @@ import org.springframework.web.bind.annotation.ResponseStatus;
 import java.util.Optional;
 
 @Component
-@FeignClient(name = "hr-worker", url = "localhost:8001", path = "/workers")
+@FeignClient(name = "hr-worker", path = "/workers")
 public interface WorkerFeignClients {
-
+    //TODO refatorar para funcionar com porta aleatória
     @GetMapping(value = "/{id}")
     @ResponseStatus(HttpStatus.OK)
     Optional<Worker> findById(@PathVariable Long id);
